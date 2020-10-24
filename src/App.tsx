@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Select } from 'antd';
+
+const { Option } = Select;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+    <Select
+      showSearch
+      style={{width: 200}}
+      placeholder="Choose some stock"
+      optionFilterProp="value"
+      filterOption={true}
+    >
+      <Option value="jack">Jack</Option>
+      <Option value="lucy">Lucy</Option>
+      <Option value="tom">Tom</Option>
+    </Select>
+  </>    
   );
 }
 
