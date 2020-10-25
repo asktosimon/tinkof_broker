@@ -1,23 +1,23 @@
 import React from 'react';
-import { Select } from 'antd';
 
-const { Option } = Select;
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import {Home} from './pages/Home'
+// init data
 
 function App() {
   return (
-  <>
-    <Select
-      showSearch
-      style={{width: 200}}
-      placeholder="Choose some stock"
-      optionFilterProp="value"
-      filterOption={true}
-    >
-      <Option value="jack">Jack</Option>
-      <Option value="lucy">Lucy</Option>
-      <Option value="tom">Tom</Option>
-    </Select>
-  </>    
+   <Router>
+     <Switch>
+       <Route path="/">
+        <Home />
+       </Route>
+     </Switch>
+   </Router>
   );
 }
 
