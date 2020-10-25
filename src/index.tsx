@@ -4,6 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 
 import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 import App from './App';
 
 import 'antd/dist/antd.css';
@@ -11,7 +12,7 @@ import 'antd/dist/antd.css';
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers';
 import rootSaga from './sagas';
-import createSagaMiddleware from 'redux-saga';
+
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
